@@ -1,5 +1,7 @@
 namespace Microsoft.Extensions.DependencyInjection
 {
+    using System;
+    using KyGunCo.Counterpoint.Sdk;
     using ServiceStack.Data;
     using ServiceStack.OrmLite;
 
@@ -13,38 +15,15 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services">The service collection.</param>
         /// <param name="connectionString">Database connection string.</param>
+        /// <param name="configure">The configuration for <see cref="IDbConnectionFactory"/>.</param>
         /// <returns>The modified service collection.</returns>
-        public static IServiceCollection AddCounterpointServices(this IServiceCollection services, string connectionString)
+        public static IServiceCollection AddCounterpointServices(this IServiceCollection services, string connectionString, Action<IDbConnectionFactory>? configure)
         {
-            var factory = new OrmLiteConnectionFactory(connectionString, SqlServer2017Dialect.Provider);
+            var factory = new OrmLiteConnectionFactory(connectionString);
 
-            _ = services.AddSingleton<IDbConnectionFactory>(factory);
+            configure?.Invoke(factory);
 
-            return services;
+            return services.AddSingleton(new CounterpointOrmLite(factory));
         }
-
-        /// <summary>
-        /// Add Counterpoint services to service collection.
-        /// </summary>
-        /// <param name="services">The service collection.</param>
-        /// <param name="connectionString">Database connection string.</param>
-        /// <param name="dialectProvider">Dialect provider for the Counterpoint instance.</param>
-        /// <returns>The modified service collection.</returns>
-        public static IServiceCollection AddCounterpointServices(this IServiceCollection services, string connectionString, IOrmLiteDialectProvider? dialectProvider = null)
-        {
-            var factory = new OrmLiteConnectionFactory(connectionString, dialectProvider ?? SqlServer2017Dialect.Provider);
-
-            _ = services.AddSingleton<IDbConnectionFactory>(factory);
-
-            return services;
-        }
-
-        /// <summary>
-        /// Add Counterpoint services to service collection.
-        /// </summary>
-        /// <param name="services">The service collection.</param>
-        /// <returns>The modified service collection.</returns>
-        public static IServiceCollection AddCounterpointServices(this IServiceCollection services) =>
-            services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory());
     }
 }
