@@ -17,9 +17,9 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <param name="connectionString">Database connection string.</param>
         /// <param name="configure">The configuration for <see cref="IDbConnectionFactory"/>.</param>
         /// <returns>The modified service collection.</returns>
-        public static IServiceCollection AddCounterpointServices(this IServiceCollection services, string connectionString, Action<IDbConnectionFactory>? configure)
+        public static IServiceCollection AddCounterpointServices(this IServiceCollection services, string connectionString, Action<OrmLiteConnectionFactory>? configure = null)
         {
-            var factory = new OrmLiteConnectionFactory(connectionString);
+            var factory = new OrmLiteConnectionFactory(connectionString, SqlServer2017Dialect.Provider);
 
             configure?.Invoke(factory);
 
