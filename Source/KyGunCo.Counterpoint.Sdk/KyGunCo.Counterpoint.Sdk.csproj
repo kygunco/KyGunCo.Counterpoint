@@ -14,6 +14,11 @@
 
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
+    <Copyright>Copyright © Jose Fernandez. All rights Reserved</Copyright>
+    <PackageProjectUrl>https://github.com/kygunco/KyGunCo.Counterpoint</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kygunco/KyGunCo.Counterpoint.git</RepositoryUrl>
+    <PackageReleaseNotes>https://github.com/kygunco/KyGunCo.Counterpoint/releases</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
