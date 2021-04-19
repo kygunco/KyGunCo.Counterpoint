@@ -450,7 +450,6 @@ namespace KyGunCo.Counterpoint.Sdk.Data
         public byte? USER_SHIPPING_EASY_STAT { get; set; }
         public string USER_SHIPPING_EASY_RESPONSE { get; set; }
         public int? USER_SHIPPING_EASY_ID { get; set; }
-        public string USER_OPTICS_OWL_ID { get; set; }
     }
 
 }
