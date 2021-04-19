@@ -42,6 +42,7 @@ namespace KyGunCo.Counterpoint.Sdk.Data
         public int SO_LINS { get; set; }
         public string DRW_ID { get; set; }
         public long? DRW_SESSION_ID { get; set; }
+        [References(typeof(AR_CUST))]
         public string CUST_NO { get; set; }
         public int? RET_LINS { get; set; }
         public string SHIP_VIA_COD { get; set; }
