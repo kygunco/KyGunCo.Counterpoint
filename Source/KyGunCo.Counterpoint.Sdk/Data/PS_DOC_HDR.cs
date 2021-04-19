@@ -12,6 +12,7 @@ namespace KyGunCo.Counterpoint.Sdk.Data
     using ServiceStack.DataAnnotations;
     using ServiceStack.Model;
     using ServiceStack;
+    using System.Collections.Generic;
 
     public partial class PS_DOC_HDR 
     {
@@ -112,6 +113,41 @@ namespace KyGunCo.Counterpoint.Sdk.Data
         [Required]
         public int DS_LINS { get; set; }
         public DateTime? LST_LCK_DT { get; set; }
+
+        #region References
+        [Reference]
+        public PS_DOC_HDR_EXT PS_DOC_HDR_EXT { get; set; }
+
+        [Reference]
+        public List<PS_DOC_LIN> PS_DOC_LIN { get; set; }
+
+        [Reference]
+        public List<PS_DOC_LIN_CELL> PS_DOC_LIN_CELL { get; set; }
+
+        [Reference]
+        public List<PS_DOC_NOTE> PS_DOC_NOTE { get; set; }
+
+        [Reference]
+        public List<PS_DOC_PKG_TRK_NO> PS_DOC_PKG_TRK_NO { get; set; }
+
+        [Reference]
+        public List<PS_DOC_PMT> PS_DOC_PMT { get; set; }
+
+        [Reference]
+        public List<PS_DOC_PMT_APPLY> PS_DOC_PMT_APPLY { get; set; }
+
+        [Reference]
+        public List<PS_DOC_PMT_CHK> PS_DOC_PMT_CHK { get; set; }
+
+        [Reference]
+        public List<PS_DOC_PMT_CR_CARD> PS_DOC_PMT_CR_CARD { get; set; }
+
+        [Reference]
+        public List<PS_DOC_TAX> PS_DOC_TAX { get; set; }
+
+        [Reference]
+        public List<PS_DOC_HDR_TOT> PS_DOC_HDR_TOT { get; set; }
+        #endregion
     }
 
 }

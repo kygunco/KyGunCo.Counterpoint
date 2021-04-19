@@ -12,6 +12,7 @@ namespace KyGunCo.Counterpoint.Sdk.Data
     using ServiceStack.DataAnnotations;
     using ServiceStack.Model;
     using ServiceStack;
+    using System.Collections.Generic;
 
     public partial class AR_CUST 
     {
@@ -266,6 +267,11 @@ namespace KyGunCo.Counterpoint.Sdk.Data
         public string USER_PLACE_OF_BIRTH { get; set; }
         public string USER_COUNTY { get; set; }
         public string USER_MID_NAM { get; set; }
+
+        #region References
+        [Reference]
+        public List<PS_DOC_HDR> PS_DOC_HDR { get; set; }
+        #endregion
     }
 
 }
