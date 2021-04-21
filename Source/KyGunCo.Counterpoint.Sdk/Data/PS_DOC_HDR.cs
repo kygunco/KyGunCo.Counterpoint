@@ -120,6 +120,9 @@ namespace KyGunCo.Counterpoint.Sdk.Data
         public PS_DOC_HDR_EXT PS_DOC_HDR_EXT { get; set; }
 
         [Reference]
+        public PS_DOC_HDR_DOC_STAT PS_DOC_HDR_DOC_STAT { get; set; }
+
+        [Reference]
         public List<PS_DOC_LIN> PS_DOC_LIN { get; set; }
 
         [Reference]

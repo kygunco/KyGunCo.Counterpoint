@@ -79,6 +79,7 @@ jobs:
         uses: actions/delete-package-versions@v1
         with:
           package-name: 'KyGunCo.Counterpoint.Sdk'
+          num-old-versions-to-delete: 5
 
   # push-nuget:
   #   name: 'Push NuGet Packages'
