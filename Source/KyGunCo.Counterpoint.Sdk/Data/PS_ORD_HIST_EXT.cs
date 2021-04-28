@@ -83,6 +83,8 @@ namespace KyGunCo.Counterpoint.Sdk.Data
         public string USER_SHIPPING_EASY_RESPONSE { get; set; }
         public int? USER_SHIPPING_EASY_ID { get; set; }
         public string USER_OPTICS_OWL_ID { get; set; }
+        public string USER_IS_LAYAWAY { get; set; }
+        public string USER_IS_CLASS_3 { get; set; }
     }
 
 }
