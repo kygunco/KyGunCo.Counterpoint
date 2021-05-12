@@ -15,10 +15,9 @@ namespace KyGunCo.Counterpoint.Sdk.Data
 
     public partial class PS_DOC_LIN_CELL 
     {
-        [References(typeof(PS_DOC_LIN))]
+        [References(typeof(PS_DOC_HDR))]
         [Required]
         public long DOC_ID { get; set; }
-        [References(typeof(PS_DOC_LIN))]
         [Required]
         public int LIN_SEQ_NO { get; set; }
         [Required]

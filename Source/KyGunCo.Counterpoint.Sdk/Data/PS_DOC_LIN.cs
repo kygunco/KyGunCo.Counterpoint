@@ -12,6 +12,7 @@ namespace KyGunCo.Counterpoint.Sdk.Data
     using ServiceStack.DataAnnotations;
     using ServiceStack.Model;
     using ServiceStack;
+    using System.Collections.Generic;
 
     public partial class PS_DOC_LIN 
     {

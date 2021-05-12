@@ -123,34 +123,34 @@ namespace KyGunCo.Counterpoint.Sdk.Data
         public PS_DOC_HDR_DOC_STAT PS_DOC_HDR_DOC_STAT { get; set; }
 
         [Reference]
-        public List<PS_DOC_LIN> PS_DOC_LIN { get; set; }
+        public List<PS_DOC_LIN> PS_DOC_LIN { get; set; } = new List<PS_DOC_LIN>();
 
         [Reference]
-        public List<PS_DOC_LIN_CELL> PS_DOC_LIN_CELL { get; set; }
+        public List<PS_DOC_LIN_CELL> PS_DOC_LIN_CELL { get; set; } = new List<PS_DOC_LIN_CELL>();
 
         [Reference]
-        public List<PS_DOC_NOTE> PS_DOC_NOTE { get; set; }
+        public List<PS_DOC_NOTE> PS_DOC_NOTE { get; set; } = new List<PS_DOC_NOTE>();
 
         [Reference]
-        public List<PS_DOC_PKG_TRK_NO> PS_DOC_PKG_TRK_NO { get; set; }
+        public List<PS_DOC_PKG_TRK_NO> PS_DOC_PKG_TRK_NO { get; set; } = new List<PS_DOC_PKG_TRK_NO>();
 
         [Reference]
-        public List<PS_DOC_PMT> PS_DOC_PMT { get; set; }
+        public List<PS_DOC_PMT> PS_DOC_PMT { get; set; } = new List<PS_DOC_PMT>();
 
         [Reference]
-        public List<PS_DOC_PMT_APPLY> PS_DOC_PMT_APPLY { get; set; }
+        public List<PS_DOC_PMT_APPLY> PS_DOC_PMT_APPLY { get; set; } = new List<PS_DOC_PMT_APPLY>();
 
         [Reference]
-        public List<PS_DOC_PMT_CHK> PS_DOC_PMT_CHK { get; set; }
+        public List<PS_DOC_PMT_CHK> PS_DOC_PMT_CHK { get; set; } = new List<PS_DOC_PMT_CHK>();
 
         [Reference]
-        public List<PS_DOC_PMT_CR_CARD> PS_DOC_PMT_CR_CARD { get; set; }
+        public List<PS_DOC_PMT_CR_CARD> PS_DOC_PMT_CR_CARD { get; set; } = new List<PS_DOC_PMT_CR_CARD>();
 
         [Reference]
-        public List<PS_DOC_TAX> PS_DOC_TAX { get; set; }
+        public List<PS_DOC_TAX> PS_DOC_TAX { get; set; } = new List<PS_DOC_TAX>();
 
         [Reference]
-        public List<PS_DOC_HDR_TOT> PS_DOC_HDR_TOT { get; set; }
+        public List<PS_DOC_HDR_TOT> PS_DOC_HDR_TOT { get; set; } = new List<PS_DOC_HDR_TOT>();
         #endregion
     }
 

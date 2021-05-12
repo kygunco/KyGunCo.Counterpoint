@@ -76,11 +76,11 @@ jobs:
       - name: 'Dotnet NuGet Push'
         run: dotnet nuget push .\windows-latest\*.nupkg --api-key ${{ github.token }} --source GitHub --skip-duplicate
         shell: pwsh
-      - name: 'Remove old packages'
-        uses: actions/delete-package-versions@v1
-        with:
-          package-name: 'KyGunCo.Counterpoint.Sdk'
-          num-old-versions-to-delete: 5
+      # - name: 'Remove old packages'
+      #   uses: actions/delete-package-versions@v1
+      #   with:
+      #     package-name: 'KyGunCo.Counterpoint.Sdk'
+      #     num-old-versions-to-delete: 1
 
   # push-nuget:
   #   name: 'Push NuGet Packages'
