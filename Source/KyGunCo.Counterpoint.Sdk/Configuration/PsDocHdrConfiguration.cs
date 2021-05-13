@@ -14,7 +14,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.ToTable("PS_DOC_HDR", "dbo");
             builder.HasKey(x => x.DocId).HasName("PK_PS_DOC_HDR").IsClustered();
 
-            builder.Property(x => x.DocId).HasColumnName(@"DOC_ID").HasColumnType("bigint").IsRequired().ValueGeneratedOnAdd().HasDefaultValueSql("NEXT VALUE FOR PS_DOC_HDR_SEQ");
+            builder.Property(x => x.DocId).HasColumnName(@"DOC_ID").HasColumnType("bigint").IsRequired().UseHiLo("PS_DOC_HDR_SEQ");
             builder.Property(x => x.StrId).HasColumnName(@"STR_ID").HasColumnType("varchar(10)").IsRequired().IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.StaId).HasColumnName(@"STA_ID").HasColumnType("varchar(10)").IsRequired().IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.TktNo).HasColumnName(@"TKT_NO").HasColumnType("varchar(15)").IsRequired().IsUnicode(false).HasMaxLength(15);
