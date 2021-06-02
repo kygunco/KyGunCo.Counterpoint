@@ -17,6 +17,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.BusDatExt).HasColumnName(@"BUS_DAT_EXT").HasColumnType("smalldatetime").IsRequired().ValueGeneratedNever();
             builder.Property(x => x.DocIdExt).HasColumnName(@"DOC_ID_EXT").HasColumnType("bigint").IsRequired().ValueGeneratedNever();
             builder.Property(x => x.PmtSeqNoExt).HasColumnName(@"PMT_SEQ_NO_EXT").HasColumnType("int").IsRequired().ValueGeneratedNever();
+            builder.Property(x => x.UserRef).HasColumnName(@"USER_REF").HasColumnType("varchar(50)").IsRequired(false).IsUnicode(false).HasMaxLength(50);
 
             // Foreign keys
             builder.HasOne(a => a.PsOrdHistPmt).WithOne(b => b.PsOrdHistPmtExt).HasForeignKey<PsOrdHistPmtExt>(c => new { c.BusDatExt, c.DocIdExt, c.PmtSeqNoExt }).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PS_ORD_HIST_PMT_EXT_PS_ORD_HIST_PMT");

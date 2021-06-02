@@ -12,6 +12,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
     {
         public long DocIdExt { get; set; } // DOC_ID_EXT (Primary key)
         public int PmtSeqNoExt { get; set; } // PMT_SEQ_NO_EXT (Primary key)
+        public string UserRef { get; set; } // USER_REF (length: 50)
 
         // Foreign keys
 
