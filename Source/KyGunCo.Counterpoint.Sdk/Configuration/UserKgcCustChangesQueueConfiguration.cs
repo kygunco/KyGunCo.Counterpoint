@@ -12,7 +12,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
         public void Configure(EntityTypeBuilder<UserKgcCustChangesQueue> builder)
         {
             builder.ToTable("USER_KGC_CUST_CHANGES_QUEUE", "dbo");
-            builder.HasKey(x => x.CustNo).HasName("PK__USER_KGC__93ABE850D533855F").IsClustered();
+            builder.HasKey(x => x.CustNo).HasName("PK_USER_KGC_CUST_CHANGES_QUEUE").IsClustered();
 
             builder.Property(x => x.CustNo).HasColumnName(@"CUST_NO").HasColumnType("varchar(15)").IsRequired().IsUnicode(false).HasMaxLength(15).ValueGeneratedNever();
             builder.Property(x => x.CreatedDt).HasColumnName(@"CREATED_DT").HasColumnType("datetimeoffset").IsRequired();

@@ -758,6 +758,7 @@ namespace KyGunCo.Counterpoint.Sdk
         public DbSet<UserItemOnSaleInfo> UserItemOnSaleInfoes { get; set; } // USER_ITEM_ON_SALE_INFO
         public DbSet<UserItemReplacement> UserItemReplacements { get; set; } // USER_ITEM_REPLACEMENT
         public DbSet<UserItemUpload> UserItemUploads { get; set; } // USER_ITEM_UPLOAD
+        public DbSet<UserKgcDocChangesQueue> UserKgcDocChangesQueues { get; set; } // USER_KGC_DOC_CHANGES_QUEUE
         public DbSet<UserKgcCustChangesQueue> UserKgcCustChangesQueues { get; set; } // USER_KGC_CUST_CHANGES_QUEUE
         public DbSet<UserKgcItemChangesQueue> UserKgcItemChangesQueues { get; set; } // USER_KGC_ITEM_CHANGES_QUEUE
         public DbSet<UserOrderDetail> UserOrderDetails { get; set; } // USER_ORDER_DETAILS
@@ -1808,6 +1809,7 @@ namespace KyGunCo.Counterpoint.Sdk
             modelBuilder.ApplyConfiguration(new UserItemOnSaleInfoConfiguration());
             modelBuilder.ApplyConfiguration(new UserItemReplacementConfiguration());
             modelBuilder.ApplyConfiguration(new UserItemUploadConfiguration());
+            modelBuilder.ApplyConfiguration(new UserKgcDocChangesQueueConfiguration());
             modelBuilder.ApplyConfiguration(new UserKgcCustChangesQueueConfiguration());
             modelBuilder.ApplyConfiguration(new UserKgcItemChangesQueueConfiguration());
             modelBuilder.ApplyConfiguration(new UserOrderDetailConfiguration());
