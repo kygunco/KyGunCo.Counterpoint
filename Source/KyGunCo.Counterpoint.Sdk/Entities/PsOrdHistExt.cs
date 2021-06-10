@@ -75,6 +75,12 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public int? UserShippingEasyId { get; set; } // USER_SHIPPING_EASY_ID
         public string UserIsLayaway { get; set; } = "N"; // USER_IS_LAYAWAY (length: 1)
         public string UserIsClass3 { get; set; } = "N"; // USER_IS_CLASS_3 (length: 1)
+        public string UserIsVirtual { get; set; } = "N"; // USER_IS_VIRTUAL (length: 1)
+        public string UserIssueRequiresCheck { get; set; } = "N"; // USER_ISSUE_REQUIRES_CHECK (length: 1)
+        public string UserIssueRequiresPayment { get; set; } = "N"; // USER_ISSUE_REQUIRES_PAYMENT (length: 1)
+        public string UserIssueRequiresFfl { get; set; } = "N"; // USER_ISSUE_REQUIRES_FFL (length: 1)
+        public string UserIssueRequiresDocumentationk { get; set; } = "N"; // USER_ISSUE_REQUIRES_DOCUMENTATION (length: 1)
+        public string UserIssueIsOnOrder { get; set; } = "N"; // USER_ISSUE_IS_ON_ORDER (length: 1)
 
         // Foreign keys
 

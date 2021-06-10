@@ -79,6 +79,12 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserShippingEasyId).HasColumnName(@"USER_SHIPPING_EASY_ID").HasColumnType("int").IsRequired(false);
             builder.Property(x => x.UserIsLayaway).HasColumnName(@"USER_IS_LAYAWAY").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIsClass3).HasColumnName(@"USER_IS_CLASS_3").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIsVirtual).HasColumnName(@"USER_IS_VIRTUAL").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIssueRequiresCheck).HasColumnName(@"USER_ISSUE_REQUIRES_CHECK").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIssueRequiresPayment).HasColumnName(@"USER_ISSUE_REQUIRES_PAYMENT").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIssueRequiresFfl).HasColumnName(@"USER_ISSUE_REQUIRES_FFL").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIssueRequiresDocumentationk).HasColumnName(@"USER_ISSUE_REQUIRES_DOCUMENTATION").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIssueIsOnOrder).HasColumnName(@"USER_ISSUE_IS_ON_ORDER").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
 
             // Foreign keys
             builder.HasOne(a => a.PsOrdHist).WithOne(b => b.PsOrdHistExt).HasForeignKey<PsOrdHistExt>(c => new { c.BusDatExt, c.DocIdExt }).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PS_ORD_HIST_EXT_PS_ORD_HIST");
