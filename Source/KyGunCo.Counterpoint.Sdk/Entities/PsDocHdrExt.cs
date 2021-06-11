@@ -448,7 +448,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string UserIssueRequiresCheck { get; set; } = "N"; // USER_ISSUE_REQUIRES_CHECK (length: 1)
         public string UserIssueRequiresPayment { get; set; } = "N"; // USER_ISSUE_REQUIRES_PAYMENT (length: 1)
         public string UserIssueRequiresFfl { get; set; } = "N"; // USER_ISSUE_REQUIRES_FFL (length: 1)
-        public string UserIssueRequiresDocumentationk { get; set; } = "N"; // USER_ISSUE_REQUIRES_DOCUMENTATION (length: 1)
+        public string UserIssueRequiresDocumentation { get; set; } = "N"; // USER_ISSUE_REQUIRES_DOCUMENTATION (length: 1)
         public string UserIssueIsOnOrder { get; set; } = "N"; // USER_ISSUE_IS_ON_ORDER (length: 1)
 
         // Foreign keys

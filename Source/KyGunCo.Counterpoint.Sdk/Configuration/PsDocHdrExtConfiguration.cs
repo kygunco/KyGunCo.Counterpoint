@@ -452,7 +452,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserIssueRequiresCheck).HasColumnName(@"USER_ISSUE_REQUIRES_CHECK").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIssueRequiresPayment).HasColumnName(@"USER_ISSUE_REQUIRES_PAYMENT").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIssueRequiresFfl).HasColumnName(@"USER_ISSUE_REQUIRES_FFL").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
-            builder.Property(x => x.UserIssueRequiresDocumentationk).HasColumnName(@"USER_ISSUE_REQUIRES_DOCUMENTATION").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIssueRequiresDocumentation).HasColumnName(@"USER_ISSUE_REQUIRES_DOCUMENTATION").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIssueIsOnOrder).HasColumnName(@"USER_ISSUE_IS_ON_ORDER").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
 
             // Foreign keys
