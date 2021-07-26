@@ -194,7 +194,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string UserBarrelLength { get; set; } // USER_BARREL_LENGTH (length: 10)
         public string UserOverallLength { get; set; } // USER_OVERALL_LENGTH (length: 10)
         public string UserIsNew { get; set; } // USER_IS_NEW (length: 1)
-        public string UserConsigned { get; set; } = "N"; // USER_CONSIGNED (length: 1)
+        public string UserIsConsigned { get; set; } = "N"; // USER_IS_CONSIGNED (length: 1)
         public string UserIsUsed { get; set; } = "N"; // USER_IS_USED (length: 1)
         public string UserCountryOfOrigin { get; set; } // USER_COUNTRY_OF_ORIGIN (length: 50)
         public string UserBoundBookType { get; set; } // USER_BOUND_BOOK_TYPE (length: 50)
@@ -202,6 +202,11 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string UserRequiresLock { get; set; } = "N"; // USER_REQUIRES_LOCK (length: 1)
         public string UserIsLock { get; set; } = "N"; // USER_IS_LOCK (length: 1)
         public decimal? UserConsignmentPayoutPct { get; set; } // USER_CONSIGNMENT_PAYOUT_PCT
+        public string UserAmmoLogHollowPoint { get; set; } // USER_AMMO_LOG_HOLLOW_POINT (length: 1)
+        public string UserAmmoLogManufacturer { get; set; } // USER_AMMO_LOG_MANUFACTURER (length: 30)
+        public string UserAmmoLogCaliberGauge { get; set; } // USER_AMMO_LOG_CALIBER_GAUGE (length: 30)
+        public string UserAmmoLogRoundsPerBox { get; set; } // USER_AMMO_LOG_ROUNDS_PER_BOX (length: 30)
+        public string UserAmmoLogItemRoundsPerBox { get; set; } // USER_AMMO_LOG_ITEM_ROUNDS_PER_BOX (length: 30)
 
         // Reverse navigation
 

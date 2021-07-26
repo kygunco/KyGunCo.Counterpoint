@@ -198,7 +198,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserBarrelLength).HasColumnName(@"USER_BARREL_LENGTH").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.UserOverallLength).HasColumnName(@"USER_OVERALL_LENGTH").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.UserIsNew).HasColumnName(@"USER_IS_NEW").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
-            builder.Property(x => x.UserConsigned).HasColumnName(@"USER_CONSIGNED").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserIsConsigned).HasColumnName(@"USER_IS_CONSIGNED").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIsUsed).HasColumnName(@"USER_IS_USED").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserCountryOfOrigin).HasColumnName(@"USER_COUNTRY_OF_ORIGIN").HasColumnType("varchar(50)").IsRequired(false).IsUnicode(false).HasMaxLength(50);
             builder.Property(x => x.UserBoundBookType).HasColumnName(@"USER_BOUND_BOOK_TYPE").HasColumnType("varchar(50)").IsRequired(false).IsUnicode(false).HasMaxLength(50);
@@ -206,6 +206,11 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserRequiresLock).HasColumnName(@"USER_REQUIRES_LOCK").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIsLock).HasColumnName(@"USER_IS_LOCK").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserConsignmentPayoutPct).HasColumnName(@"USER_CONSIGNMENT_PAYOUT_PCT").HasColumnType("decimal(9,3)").IsRequired(false);
+            builder.Property(x => x.UserAmmoLogHollowPoint).HasColumnName(@"USER_AMMO_LOG_HOLLOW_POINT").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserAmmoLogManufacturer).HasColumnName(@"USER_AMMO_LOG_MANUFACTURER").HasColumnType("varchar(30)").IsRequired(false).IsUnicode(false).HasMaxLength(30);
+            builder.Property(x => x.UserAmmoLogCaliberGauge).HasColumnName(@"USER_AMMO_LOG_CALIBER_GAUGE").HasColumnType("varchar(30)").IsRequired(false).IsUnicode(false).HasMaxLength(30);
+            builder.Property(x => x.UserAmmoLogRoundsPerBox).HasColumnName(@"USER_AMMO_LOG_ROUNDS_PER_BOX").HasColumnType("varchar(30)").IsRequired(false).IsUnicode(false).HasMaxLength(30);
+            builder.Property(x => x.UserAmmoLogItemRoundsPerBox).HasColumnName(@"USER_AMMO_LOG_ITEM_ROUNDS_PER_BOX").HasColumnType("varchar(30)").IsRequired(false).IsUnicode(false).HasMaxLength(30);
 
             // Foreign keys
             builder.HasOne(a => a.ImCategCod).WithMany(b => b.ImItems).HasForeignKey(c => c.CategCod).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_IM_ITEM_IM_CATEG_COD");
