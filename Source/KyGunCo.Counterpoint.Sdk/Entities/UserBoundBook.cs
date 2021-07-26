@@ -63,8 +63,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string BoundBookType { get; set; } // BOUND_BOOK_TYPE (length: 50)
         public int? BoundBookTypeLocSeqNo { get; set; } // BOUND_BOOK_TYPE_LOC_SEQ_NO
         public string ConversionRef { get; set; } // CONVERSION_REF (length: 10)
-        public DateTime LstUpdateDt { get; private set; } // LST_UPDATE_DT
-        public string LstUpdateUsrId { get; private set; } // LST_UPDATE_USR_ID (length: 10)
+        public int? E4473SeqNo { get; set; } // E4473_SEQ_NO
     }
 
 }

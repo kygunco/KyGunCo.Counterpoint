@@ -67,8 +67,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.BoundBookType).HasColumnName(@"BOUND_BOOK_TYPE").HasColumnType("varchar(50)").IsRequired(false).IsUnicode(false).HasMaxLength(50);
             builder.Property(x => x.BoundBookTypeLocSeqNo).HasColumnName(@"BOUND_BOOK_TYPE_LOC_SEQ_NO").HasColumnType("int").IsRequired(false);
             builder.Property(x => x.ConversionRef).HasColumnName(@"CONVERSION_REF").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
-            builder.Property(x => x.LstUpdateDt).HasColumnName(@"LST_UPDATE_DT").HasColumnType("datetime").IsRequired().ValueGeneratedOnAddOrUpdate();
-            builder.Property(x => x.LstUpdateUsrId).HasColumnName(@"LST_UPDATE_USR_ID").HasColumnType("varchar(10)").IsRequired().IsUnicode(false).HasMaxLength(10).ValueGeneratedOnAddOrUpdate();
+            builder.Property(x => x.E4473SeqNo).HasColumnName(@"E4473_SEQ_NO").HasColumnType("int").IsRequired(false);
 
             builder.HasIndex(x => x.DispDate).HasDatabaseName("IX_USER_BOUND_BOOK_DISP_DATE");
             builder.HasIndex(x => new { x.ItemNo, x.DispDocNo }).HasDatabaseName("IX_USER_BOUND_BOOK_ITEM_NO_DISP_DOC_NO");
