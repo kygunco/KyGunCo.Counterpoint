@@ -409,7 +409,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserAmmoLogId).HasColumnName(@"USER_AMMO_LOG_ID").HasColumnType("varchar(30)").IsRequired(false).IsUnicode(false).HasMaxLength(30);
             builder.Property(x => x.UserShippingEasyStat).HasColumnName(@"USER_SHIPPING_EASY_STAT").HasColumnType("tinyint").IsRequired(false);
             builder.Property(x => x.UserShippingEasyResponse).HasColumnName(@"USER_SHIPPING_EASY_RESPONSE").HasColumnType("varchar(1000)").IsRequired(false).IsUnicode(false).HasMaxLength(1000);
-            builder.Property(x => x.UserShippingEasyId).HasColumnName(@"USER_SHIPPING_EASY_ID").HasColumnType("int").IsRequired(false);
+            builder.Property(x => x.UserShippingEasyId).HasColumnName(@"USER_SHIPPING_EASY_ID").HasColumnType("bigint").IsRequired(false);
             builder.Property(x => x.UserIsLayaway).HasColumnName(@"USER_IS_LAYAWAY").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIsClass3).HasColumnName(@"USER_IS_CLASS_3").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserIsVirtual).HasColumnName(@"USER_IS_VIRTUAL").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
