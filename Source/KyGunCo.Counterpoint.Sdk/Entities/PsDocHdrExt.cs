@@ -405,7 +405,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string UserAmmoLogId { get; set; } // USER_AMMO_LOG_ID (length: 30)
         public byte? UserShippingEasyStat { get; set; } // USER_SHIPPING_EASY_STAT
         public string UserShippingEasyResponse { get; set; } // USER_SHIPPING_EASY_RESPONSE (length: 1000)
-        public int? UserShippingEasyId { get; set; } // USER_SHIPPING_EASY_ID
+        public long? UserShippingEasyId { get; set; } // USER_SHIPPING_EASY_ID
         public string UserIsLayaway { get; set; } = "N"; // USER_IS_LAYAWAY (length: 1)
         public string UserIsClass3 { get; set; } = "N"; // USER_IS_CLASS_3 (length: 1)
         public string UserIsVirtual { get; set; } = "N"; // USER_IS_VIRTUAL (length: 1)
