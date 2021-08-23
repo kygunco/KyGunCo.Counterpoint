@@ -22,7 +22,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string UserEcommOrdNo { get; set; } // USER_ECOMM_ORD_NO (length: 15)
         public string UserEcommReceiptNo { get; set; } // USER_ECOMM_RECEIPT_NO (length: 10)
         public string UserOrigDocGuid { get; set; } // USER_ORIG_DOC_GUID (length: 500)
-        public int? E4473SeqNo { get; set; } // E4473_SEQ_NO
+        public string E4473SeqNo { get; set; } // E4473_SEQ_NO
         public long? E4473Id { get; set; } // E4473_ID
         public string UserArCategCod { get; set; } // USER_AR_CATEG_COD
         public DateTime? UserMembershipDat { get; set; } // USER_MEMBERSHIP_DAT

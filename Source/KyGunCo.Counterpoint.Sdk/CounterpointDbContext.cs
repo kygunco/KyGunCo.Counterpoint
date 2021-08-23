@@ -744,7 +744,6 @@ namespace KyGunCo.Counterpoint.Sdk
         public DbSet<UserCommisSchedGrp> UserCommisSchedGrps { get; set; } // USER_COMMIS_SCHED_GRP
         public DbSet<UserCommisSchedRul> UserCommisSchedRuls { get; set; } // USER_COMMIS_SCHED_RUL
         public DbSet<UserCustomProc> UserCustomProcs { get; set; } // USER_CUSTOM_PROCS
-        public DbSet<UserE4473Info> UserE4473Info { get; set; } // USER_E4473_INFO
         public DbSet<UserEcommAttrType> UserEcommAttrTypes { get; set; } // USER_ECOMM_ATTR_TYPE
         public DbSet<UserEcommAttrTypeItemMapping> UserEcommAttrTypeItemMappings { get; set; } // USER_ECOMM_ATTR_TYPE_ITEM_MAPPING
         public DbSet<UserEcommAttrTypeMappingValue> UserEcommAttrTypeMappingValues { get; set; } // USER_ECOMM_ATTR_TYPE_MAPPING_VALUES
@@ -1796,7 +1795,6 @@ namespace KyGunCo.Counterpoint.Sdk
             modelBuilder.ApplyConfiguration(new UserCommisSchedGrpConfiguration());
             modelBuilder.ApplyConfiguration(new UserCommisSchedRulConfiguration());
             modelBuilder.ApplyConfiguration(new UserCustomProcConfiguration());
-            modelBuilder.ApplyConfiguration(new UserE4473InfoConfiguration());
             modelBuilder.ApplyConfiguration(new UserEcommAttrTypeConfiguration());
             modelBuilder.ApplyConfiguration(new UserEcommAttrTypeItemMappingConfiguration());
             modelBuilder.ApplyConfiguration(new UserEcommAttrTypeMappingValueConfiguration());

@@ -26,7 +26,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserEcommOrdNo).HasColumnName(@"USER_ECOMM_ORD_NO").HasColumnType("varchar(15)").IsRequired(false).IsUnicode(false).HasMaxLength(15);
             builder.Property(x => x.UserEcommReceiptNo).HasColumnName(@"USER_ECOMM_RECEIPT_NO").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.UserOrigDocGuid).HasColumnName(@"USER_ORIG_DOC_GUID").HasColumnType("varchar(500)").IsRequired(false).IsUnicode(false).HasMaxLength(500);
-            builder.Property(x => x.E4473SeqNo).HasColumnName(@"E4473_SEQ_NO").HasColumnType("int").IsRequired(false);
+            builder.Property(x => x.E4473SeqNo).HasColumnName(@"E4473_SEQ_NO").HasColumnType("varchar(30)").IsRequired(false);
             builder.Property(x => x.E4473Id).HasColumnName(@"E4473_ID").HasColumnType("bigint").IsRequired(false);
             builder.Property(x => x.UserArCategCod).HasColumnName(@"USER_AR_CATEG_COD").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.UserMembershipDat).HasColumnName(@"USER_MEMBERSHIP_DAT").HasColumnType("datetime").IsRequired(false);

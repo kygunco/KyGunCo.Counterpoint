@@ -734,7 +734,6 @@ namespace KyGunCo.Counterpoint.Sdk
         DbSet<UserCommisSchedGrp> UserCommisSchedGrps { get; set; } // USER_COMMIS_SCHED_GRP
         DbSet<UserCommisSchedRul> UserCommisSchedRuls { get; set; } // USER_COMMIS_SCHED_RUL
         DbSet<UserCustomProc> UserCustomProcs { get; set; } // USER_CUSTOM_PROCS
-        DbSet<UserE4473Info> UserE4473Info { get; set; } // USER_E4473_INFO
         DbSet<UserEcommAttrType> UserEcommAttrTypes { get; set; } // USER_ECOMM_ATTR_TYPE
         DbSet<UserEcommAttrTypeItemMapping> UserEcommAttrTypeItemMappings { get; set; } // USER_ECOMM_ATTR_TYPE_ITEM_MAPPING
         DbSet<UserEcommAttrTypeMappingValue> UserEcommAttrTypeMappingValues { get; set; } // USER_ECOMM_ATTR_TYPE_MAPPING_VALUES
