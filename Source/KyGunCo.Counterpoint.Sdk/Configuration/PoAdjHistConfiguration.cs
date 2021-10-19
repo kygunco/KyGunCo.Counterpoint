@@ -53,7 +53,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LstMaintDt).HasColumnName(@"LST_MAINT_DT").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.LstMaintUsrId).HasColumnName(@"LST_MAINT_USR_ID").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.LstLckDt).HasColumnName(@"LST_LCK_DT").HasColumnType("datetime").IsRequired(false);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.TotQtyRecvd).HasColumnName(@"TOT_QTY_RECVD").HasColumnType("decimal(15,4)").IsRequired();
             builder.Property(x => x.TotQtyAdj).HasColumnName(@"TOT_QTY_ADJ").HasColumnType("decimal(15,4)").IsRequired(false);
             builder.Property(x => x.TotWeight).HasColumnName(@"TOT_WEIGHT").HasColumnType("decimal(15,4)").IsRequired(false);

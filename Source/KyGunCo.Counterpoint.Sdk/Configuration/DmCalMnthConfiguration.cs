@@ -24,7 +24,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.NxtMnthId).HasColumnName(@"NXT_MNTH_ID").HasColumnType("int").IsRequired(false);
             builder.Property(x => x.PrevMnthId).HasColumnName(@"PREV_MNTH_ID").HasColumnType("int").IsRequired(false);
             builder.Property(x => x.CalndrId).HasColumnName(@"CALNDR_ID").HasColumnType("varchar(10)").IsRequired().IsUnicode(false).HasMaxLength(10);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
 
             // Foreign keys
             builder.HasOne(a => a.DmCalYr).WithMany(b => b.DmCalMnths).HasForeignKey(c => c.YrId).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_DM_CAL_MNTH_DM_CAL_YR");

@@ -42,7 +42,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.RelatedTotExtRetlVal).HasColumnName(@"RELATED_TOT_EXT_RETL_VAL").HasColumnType("decimal(15,2)").IsRequired();
             builder.Property(x => x.RelatedTotExtRegPrc).HasColumnName(@"RELATED_TOT_EXT_REG_PRC").HasColumnType("decimal(15,2)").IsRequired();
             builder.Property(x => x.RelatedTotExtPrc1).HasColumnName(@"RELATED_TOT_EXT_PRC_1").HasColumnType("decimal(15,2)").IsRequired();
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
 
             // Foreign keys
             builder.HasOne(a => a.DmStrHist).WithMany(b => b.DmMbItemStrMnths).HasForeignKey(c => c.StrId).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_DM_MB_ITEM_STR_MNTH_DM_STR_HIST");

@@ -22,7 +22,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.MnthId).HasColumnName(@"MNTH_ID").HasColumnType("int").IsRequired();
             builder.Property(x => x.SeasId).HasColumnName(@"SEAS_ID").HasColumnType("int").IsRequired();
             builder.Property(x => x.CalndrId).HasColumnName(@"CALNDR_ID").HasColumnType("varchar(10)").IsRequired().IsUnicode(false).HasMaxLength(10);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.DayOfWeek).HasColumnName(@"DAY_OF_WEEK").HasColumnType("int").IsRequired(false).ValueGeneratedOnAddOrUpdate();
 
             // Foreign keys

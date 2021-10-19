@@ -44,7 +44,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LstMaintDt).HasColumnName(@"LST_MAINT_DT").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.LstMaintUsrId).HasColumnName(@"LST_MAINT_USR_ID").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.LstLckDt).HasColumnName(@"LST_LCK_DT").HasColumnType("datetime").IsRequired(false);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
 
             // Foreign keys
             builder.HasOne(a => a.ArCreditDocsWrk).WithMany(b => b.ArCreditDocsApplyToWrks).HasForeignKey(c => new { c.SessId, c.CustNo, c.DocDat, c.DocNo, c.DocTyp, c.ProcessActivity }).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_AR_CREDIT_DOCS_APPLY_TO_WRK_AR_CREDIT_DOCS_WRK");

@@ -22,7 +22,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.Activ).HasColumnName(@"ACTIV").HasColumnType("varchar(2)").IsRequired().IsUnicode(false).HasMaxLength(2);
             builder.Property(x => x.Cnt).HasColumnName(@"CNT").HasColumnType("int").IsRequired(false);
             builder.Property(x => x.Amt).HasColumnName(@"AMT").HasColumnType("money").IsRequired(false);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
         }
     }
 

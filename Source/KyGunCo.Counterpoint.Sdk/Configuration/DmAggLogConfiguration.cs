@@ -18,7 +18,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.AggStatus).HasColumnName(@"AGG_STATUS").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.AggStartDt).HasColumnName(@"AGG_START_DT").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.AggEndDt).HasColumnName(@"AGG_END_DT").HasColumnType("datetime").IsRequired(false);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
         }
     }
 

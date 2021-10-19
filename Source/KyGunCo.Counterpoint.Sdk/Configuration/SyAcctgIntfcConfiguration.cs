@@ -131,7 +131,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LstMaintDt).HasColumnName(@"LST_MAINT_DT").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.LstMaintUsrId).HasColumnName(@"LST_MAINT_USR_ID").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.LstLckDt).HasColumnName(@"LST_LCK_DT").HasColumnType("datetime").IsRequired(false);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.DbNam).HasColumnName(@"DB_NAM").HasColumnType("varchar(128)").IsRequired(false).IsUnicode(false).HasMaxLength(128);
             builder.Property(x => x.DbUsrId).HasColumnName(@"DB_USR_ID").HasColumnType("varchar(128)").IsRequired(false).IsUnicode(false).HasMaxLength(128);
             builder.Property(x => x.DbPassword).HasColumnName(@"DB_PASSWORD").HasColumnType("varchar(128)").IsRequired(false).IsUnicode(false).HasMaxLength(128);

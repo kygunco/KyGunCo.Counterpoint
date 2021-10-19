@@ -94,7 +94,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LstMaintDt).HasColumnName(@"LST_MAINT_DT").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.LstMaintUsrId).HasColumnName(@"LST_MAINT_USR_ID").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.LstLckDt).HasColumnName(@"LST_LCK_DT").HasColumnType("datetime").IsRequired(false);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.ImRtvDetlDist).HasColumnName(@"IM_RTV_DETL_DIST").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.ImRtvDistRef).HasColumnName(@"IM_RTV_DIST_REF").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.PsPayInOutDetlDist).HasColumnName(@"PS_PAY_IN_OUT_DETL_DIST").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);

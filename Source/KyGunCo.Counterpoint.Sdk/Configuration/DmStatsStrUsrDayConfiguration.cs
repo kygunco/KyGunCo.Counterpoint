@@ -22,7 +22,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LinCnt).HasColumnName(@"LIN_CNT").HasColumnType("int").IsRequired();
             builder.Property(x => x.OvrShrt).HasColumnName(@"OVR_SHRT").HasColumnType("decimal(15,2)").IsRequired();
             builder.Property(x => x.HoursWrkd).HasColumnName(@"HOURS_WRKD").HasColumnType("money").IsRequired();
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
 
             // Foreign keys
             builder.HasOne(a => a.DmStrHist).WithMany(b => b.DmStatsStrUsrDays).HasForeignKey(c => c.StrId).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_DM_STATS_STR_USR_DAY_DM_STR_HIST");

@@ -42,7 +42,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.RelatedTotExtRetlVal).HasColumnName(@"RELATED_TOT_EXT_RETL_VAL").HasColumnType("decimal(15,2)").IsRequired();
             builder.Property(x => x.RelatedTotExtRegPrc).HasColumnName(@"RELATED_TOT_EXT_REG_PRC").HasColumnType("decimal(15,2)").IsRequired();
             builder.Property(x => x.RelatedTotExtPrc1).HasColumnName(@"RELATED_TOT_EXT_PRC_1").HasColumnType("decimal(15,2)").IsRequired();
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.SlsAvgPrc).HasColumnName(@"SLS_AVG_PRC").HasColumnType("decimal(35,18)").IsRequired(false);
             builder.Property(x => x.TotQtySold).HasColumnName(@"TOT_QTY_SOLD").HasColumnType("decimal(16,4)").IsRequired(false);
             builder.Property(x => x.TotExtPrc).HasColumnName(@"TOT_EXT_PRC").HasColumnType("decimal(16,2)").IsRequired(false);

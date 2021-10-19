@@ -18,7 +18,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.EventNo).HasColumnName(@"EVENT_NO").HasColumnType("varchar(15)").IsRequired().IsUnicode(false).HasMaxLength(15).ValueGeneratedNever();
             builder.Property(x => x.AggId).HasColumnName(@"AGG_ID").HasColumnType("int").IsRequired().ValueGeneratedNever();
             builder.Property(x => x.AggStatus).HasColumnName(@"AGG_STATUS").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
 
             // Foreign keys
             builder.HasOne(a => a.DmAggLog).WithMany(b => b.DmAggDetailLogs).HasForeignKey(c => c.AggExecId).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_DM_AGG_DETAIL_LOG_DM_AGG_LOG");

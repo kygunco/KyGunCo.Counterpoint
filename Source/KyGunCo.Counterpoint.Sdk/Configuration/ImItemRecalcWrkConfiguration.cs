@@ -48,7 +48,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LstMaintDt).HasColumnName(@"LST_MAINT_DT").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.LstMaintUsrId).HasColumnName(@"LST_MAINT_USR_ID").HasColumnType("varchar(10)").IsRequired(false).IsUnicode(false).HasMaxLength(10);
             builder.Property(x => x.LstLckDt).HasColumnName(@"LST_LCK_DT").HasColumnType("datetime").IsRequired(false);
-            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.MaxQtyDiff).HasColumnName(@"MAX_QTY_DIFF").HasColumnType("decimal(16,4)").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.MinQtyDiff).HasColumnName(@"MIN_QTY_DIFF").HasColumnType("decimal(16,4)").IsRequired(false).ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.QtyCommitDiff).HasColumnName(@"QTY_COMMIT_DIFF").HasColumnType("decimal(16,4)").IsRequired(false).ValueGeneratedOnAddOrUpdate();
