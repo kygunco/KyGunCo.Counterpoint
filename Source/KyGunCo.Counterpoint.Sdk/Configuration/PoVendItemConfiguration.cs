@@ -64,6 +64,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LstRecvExchRateNumer).HasColumnName(@"LST_RECV_EXCH_RATE_NUMER").HasColumnType("decimal(15,4)").IsRequired(false);
             builder.Property(x => x.LstRecvExchRateDenom).HasColumnName(@"LST_RECV_EXCH_RATE_DENOM").HasColumnType("decimal(15,4)").IsRequired(false);
             builder.Property(x => x.LstRecvCostHome).HasColumnName(@"LST_RECV_COST_HOME").HasColumnType("decimal(38,11)").IsRequired(false).ValueGeneratedOnAddOrUpdate();
+            builder.Property(x => x.UserKgcIsDropshipEnabled).HasColumnName(@"USER_KGC_IS_DROPSHIP_ENABLED").HasColumnType("varchar(1)").IsUnicode(false).HasMaxLength(1);
 
             // Foreign keys
             builder.HasOne(a => a.ImItem).WithMany(b => b.PoVendItems).HasForeignKey(c => c.ItemNo).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PO_VEND_ITEM_IM_ITEM");

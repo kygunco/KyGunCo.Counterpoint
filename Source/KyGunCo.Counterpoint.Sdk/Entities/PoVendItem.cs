@@ -60,6 +60,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public decimal? LstRecvExchRateNumer { get; set; } // LST_RECV_EXCH_RATE_NUMER
         public decimal? LstRecvExchRateDenom { get; set; } // LST_RECV_EXCH_RATE_DENOM
         public decimal? LstRecvCostHome { get; private set; } // LST_RECV_COST_HOME
+        public decimal? UserKgcIsDropshipEnabled { get; set; } // USER_KGC_IS_DROPSHIP_ENABLED (length: 1)
 
         // Reverse navigation
 
