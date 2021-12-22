@@ -42,6 +42,12 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.LoaIssue).HasColumnName(@"LOAIssue").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.LoaExpiration).HasColumnName(@"LOAExpiration").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.PdfUrl).HasColumnName(@"PDFUrl").HasColumnType("nvarchar(max)").IsRequired(false);
+            builder.Property(x => x.Documentation).HasColumnName(@"Documentation").HasColumnType("varchar(100)").IsRequired(false);
+            builder.Property(x => x.Notes).HasColumnName(@"NOTES").HasColumnType("text").IsRequired(false);
+            builder.Property(x => x.NotesTxt).HasColumnName(@"NOTES_TXT").HasColumnType("text").IsRequired(false);
+            builder.Property(x => x.LstMaintDt).HasColumnName(@"LST_MAINT_DT").HasColumnType("datetime").IsRequired(false);
+            builder.Property(x => x.LstMaintUsrId).HasColumnName(@"LST_MAINT_USR_ID").HasColumnType("varchar(10)").IsRequired(false);
+            builder.Property(x => x.RowTs).HasColumnName(@"ROW_TS").HasColumnType("timestamp").IsRequired(false).ValueGeneratedOnAddOrUpdate();
         }
     }
 

@@ -37,7 +37,13 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public DateTime? Expiration { get; set; } // Expiration
         public DateTime? LoaIssue { get; set; } // LOAIssue
         public DateTime? LoaExpiration { get; set; } // LOAExpiration
+        public string Documentation { get; set; } // Documentation
         public string PdfUrl { get; set; } // PDFUrl
+        public string Notes { get; set; } // NOTES
+        public string NotesTxt { get; set; } // NOTES_TXT
+        public DateTime? LstMaintDt { get; set; } // LST_MAINT_DT
+        public string LstMaintUsrId { get; set; } // LST_MAINT_USR_ID
+        public byte[] RowTs { get; set; } // ROW_TS
     }
 
 }
