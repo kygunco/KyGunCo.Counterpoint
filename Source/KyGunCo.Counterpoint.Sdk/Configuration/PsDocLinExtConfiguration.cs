@@ -45,6 +45,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserConsignmentPayoutRecvdDt).HasColumnName(@"USER_CONSIGNMENT_PAYOUT_RECVD_DT").HasColumnType("datetime").IsRequired(false);
             builder.Property(x => x.UserIntakeType).HasColumnName(@"USER_INTAKE_TYPE").HasColumnType("varchar(15)").IsRequired(false).IsUnicode(false).HasMaxLength(15);
             builder.Property(x => x.UserIntakeDocNo).HasColumnName(@"USER_INTAKE_DOC_NO").HasColumnType("varchar(15)").IsRequired(false).IsUnicode(false).HasMaxLength(15);
+            builder.Property(x => x.UserKgcVendNo).HasColumnName(@"USER_KGC_VEND_NO").HasColumnType("varchar(15)").IsRequired(false).IsUnicode(false).HasMaxLength(15);
 
             // Foreign keys
             builder.HasOne(a => a.PsDocLin).WithOne(b => b.PsDocLinExt).HasForeignKey<PsDocLinExt>(c => new { c.DocIdExt, c.LinSeqNoExt }).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PS_DOC_LIN_EXT_PS_DOC_LIN");
