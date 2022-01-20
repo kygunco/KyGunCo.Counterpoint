@@ -41,6 +41,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public DateTime? UserConsignmentPayoutRecvdDt { get; set; } // USER_CONSIGNMENT_PAYOUT_RECVD_DT
         public string UserIntakeType { get; set; } // USER_INTAKE_TYPE (length: 15)
         public string UserIntakeDocNo { get; set; } // USER_INTAKE_DOC_NO (length: 15)
+        public string UserKgcVendNo { get; set; } // USER_KGC_VEND_NO (length: 15)
 
         // Foreign keys
 
