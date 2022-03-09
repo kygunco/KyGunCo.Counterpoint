@@ -42,6 +42,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string UserIntakeType { get; set; } // USER_INTAKE_TYPE (length: 15)
         public string UserIntakeDocNo { get; set; } // USER_INTAKE_DOC_NO (length: 15)
         public string UserKgcVendNo { get; set; } // USER_KGC_VEND_NO (length: 15)
+        public string UserKgcIsDropship { get; set; } // USER_KGC_IS_DROPSHIP (length: 1)
 
         // Foreign keys
 
