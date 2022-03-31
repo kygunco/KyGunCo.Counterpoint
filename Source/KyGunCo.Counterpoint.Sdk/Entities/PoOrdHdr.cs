@@ -142,6 +142,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public decimal RecvdTaxAmt { get; set; } = 0m; // RECVD_TAX_AMT
         public string UserAutoEmailed { get; set; } // USER_AUTO_EMAILED (length: 1)
         public string UserKgcVendOrdNo { get; set; } // USER_KGC_VEND_ORD_NO (length: 50)
+        public string UserKgcProcess { get; set; } // USER_KGC_PROCESS (length: 1)
 
         // Reverse navigation
 

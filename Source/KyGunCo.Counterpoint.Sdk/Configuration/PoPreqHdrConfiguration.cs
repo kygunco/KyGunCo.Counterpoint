@@ -131,6 +131,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.OrdHasTaxOvrd).HasColumnName(@"ORD_HAS_TAX_OVRD").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.OrdTaxAmtHome).HasColumnName(@"ORD_TAX_AMT_HOME").HasColumnType("decimal(15,2)").IsRequired();
             builder.Property(x => x.OrdTaxAmt).HasColumnName(@"ORD_TAX_AMT").HasColumnType("decimal(15,4)").IsRequired(false).ValueGeneratedOnAddOrUpdate();
+            builder.Property(x => x.UserKgcProcess).HasColumnName(@"USER_KGC_PROCESS").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
 
             // Foreign keys
             builder.HasOne(a => a.ArTaxCod).WithMany(b => b.PoPreqHdrs).HasForeignKey(c => c.TaxCod).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PO_PREQ_HDR_AR_TAX_COD");

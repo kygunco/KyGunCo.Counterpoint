@@ -127,6 +127,7 @@ namespace KyGunCo.Counterpoint.Sdk.Entities
         public string OrdHasTaxOvrd { get; set; } = "!"; // ORD_HAS_TAX_OVRD (length: 1)
         public decimal OrdTaxAmtHome { get; set; } = 0m; // ORD_TAX_AMT_HOME
         public decimal? OrdTaxAmt { get; private set; } // ORD_TAX_AMT
+        public string UserKgcProcess { get; set; } // USER_KGC_PROCESS (length: 1)
 
         // Reverse navigation
 

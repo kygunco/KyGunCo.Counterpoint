@@ -146,6 +146,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.RecvdTaxAmt).HasColumnName(@"RECVD_TAX_AMT").HasColumnType("decimal(15,2)").IsRequired();
             builder.Property(x => x.UserAutoEmailed).HasColumnName(@"USER_AUTO_EMAILED").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
             builder.Property(x => x.UserKgcVendOrdNo).HasColumnName(@"USER_KGC_VEND_ORD_NO").HasColumnType("varchar(50)").IsRequired(false).IsUnicode(false).HasMaxLength(50);
+            builder.Property(x => x.UserKgcProcess).HasColumnName(@"USER_KGC_PROCESS").HasColumnType("varchar(1)").IsRequired().IsUnicode(false).HasMaxLength(1);
 
             // Foreign keys
             builder.HasOne(a => a.ImLoc).WithMany(b => b.PoOrdHdrs).HasForeignKey(c => c.LocId).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PO_ORD_HDR_IM_LOC");
