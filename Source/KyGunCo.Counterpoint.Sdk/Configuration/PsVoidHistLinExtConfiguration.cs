@@ -48,6 +48,7 @@ namespace KyGunCo.Counterpoint.Sdk.Configuration
             builder.Property(x => x.UserIntakeDocNo).HasColumnName(@"USER_INTAKE_DOC_NO").HasColumnType("varchar(15)").IsRequired(false).IsUnicode(false).HasMaxLength(15);
             builder.Property(x => x.UserKgcVendNo).HasColumnName(@"USER_KGC_VEND_NO").HasColumnType("varchar(15)").IsRequired(false).IsUnicode(false).HasMaxLength(15);
             builder.Property(x => x.UserKgcIsDropship).HasColumnName(@"USER_KGC_IS_DROPSHIP").HasColumnType("varchar(1)").IsRequired(false).IsUnicode(false).HasMaxLength(1);
+            builder.Property(x => x.UserKgcOrigItemNo).HasColumnName(@"USER_KGC_ORIG_ITEM_NO").HasColumnType("varchar(20)").IsRequired(false).IsUnicode(false).HasMaxLength(20);
 
             // Foreign keys
             builder.HasOne(a => a.PsVoidHistLin).WithOne(b => b.PsVoidHistLinExt).HasForeignKey<PsVoidHistLinExt>(c => new { c.BusDatExt, c.DocIdExt, c.LinSeqNoExt }).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PS_VOID_HIST_LIN_EXT_PS_VOID_HIST_LIN");
